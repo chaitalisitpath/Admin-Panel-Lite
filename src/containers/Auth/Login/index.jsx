@@ -9,13 +9,12 @@ function index() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    // setError('');
     try {
       const res = await fetch(`http://localhost:5000/users?username=${username}&password=${password}`);
       const users = await res.json();
       if (users.length > 0) {
-        // Simulate token
-        localStorage.setItem('token', 'admin-token');
+         localStorage.setItem('token', 'admin-token');
         navigate('/dashboard');
       } else {
         setError('Invalid credentials');
