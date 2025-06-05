@@ -4,6 +4,8 @@ import Login from "../containers/Auth/Login";
 import ForgotPassword from '../containers/Auth/ForgotPassword'
 import Dashboard from '../containers/Admin/Dashboard'
 import Home from '../containers/Home'
+import AddTask from '../containers/Admin/AddTask'
+import UserList from '../containers/Admin/UserList'
 
 const useRoutes = () =>{
     const allRoutes = useMemo(()=>[
@@ -29,6 +31,18 @@ const useRoutes = () =>{
             id:"dashboard",
             path:URLS.DASHBOARD,
             element: <Dashboard/>,
+            isPrivate: true
+        },
+        {
+            id:"add-task",
+            path:URLS.ADD_TASK,
+            element: <AddTask/>,
+            isPrivate: true
+        },
+        {
+            id:"user-list",
+            path:URLS.USER_LIST,
+            element: <UserList/>,
             isPrivate: true
         }
 

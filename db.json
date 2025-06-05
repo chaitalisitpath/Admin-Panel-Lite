@@ -1,12 +1,47 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "admin123"
     }
   ],
   "tasks": [
-    
+    {
+      "id": "676b",
+      "title": "Angular",
+      "description": "Angular task ",
+      "priority": "Medium",
+      "AssignedTo": "Jeel",
+      "category": "Testing",
+      "dueDate": "2025-06-13"
+    },
+    {
+      "id": "5fe1",
+      "title": "React Js ",
+      "description": "Admin Panel Task",
+      "priority": "High",
+      "AssignedTo": "Fardin",
+      "category": "Development",
+      "dueDate": "2025-06-16"
+    },
+    {
+      "id": "80cc",
+      "title": "Dot Net",
+      "description": "Create proper documentation on token ",
+      "priority": "Critical",
+      "AssignedTo": "Ajay",
+      "category": "Documentation",
+      "dueDate": "2025-06-27"
+    },
+    {
+      "id": "41ff",
+      "title": "fddgdf",
+      "description": "gdfgdfgd",
+      "priority": "Medium",
+      "AssignedTo": "Fardin",
+      "category": "Testing",
+      "dueDate": "2025-06-20"
+    }
   ]
 }
