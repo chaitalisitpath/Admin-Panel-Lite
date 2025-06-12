@@ -13,6 +13,11 @@ function index() {
     const handleRegister = async (e) => {
         e.preventDefault();
         setMessage('');
+        if(password !== confirmpassword)
+        {
+            setMessage('Password and Confirm Password does not match');
+            return;
+        }
         try {
             const res = await fetch('http://localhost:5000/users', {
                 method: 'POST',

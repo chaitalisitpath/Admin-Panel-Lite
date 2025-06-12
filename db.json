@@ -36,6 +36,14 @@
       "username": "ajay",
       "password": "Ajay123",
       "confirmpassword": "Ajay123"
+    },
+    {
+      "id": "3501",
+      "fullname": "xyz",
+      "email": "xyz@gmail.com",
+      "username": "xyzz",
+      "password": "xyz",
+      "confirmpassword": "xyz"
     }
   ],
   "tasks": [
@@ -47,15 +55,6 @@
       "AssignedTo": "Yashvi",
       "category": "Development",
       "dueDate": "2025-06-20"
-    },
-    {
-      "id": "3724",
-      "title": "dfhdfngh",
-      "description": "dfhgfjhgj",
-      "priority": "Medium",
-      "AssignedTo": "chaitali",
-      "category": "Presentation",
-      "dueDate": "2025-06-28"
     }
   ]
 }

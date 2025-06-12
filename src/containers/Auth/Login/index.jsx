@@ -78,11 +78,7 @@ function index() {
               >
                 Login
               </button>
-              <div className="mt-2">
-                <Link to="/forgot-password" className="text-white hover:underline">
-                  Forgot Password ?
-                </Link>
-              </div>
+            
               <div className="mt-2">
                 <Link to="/register" className="text-white hover:underline">
                   Not registered ?

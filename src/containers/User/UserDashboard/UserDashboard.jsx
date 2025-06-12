@@ -5,9 +5,22 @@ function UserDashboard() {
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   const [username, setUsername] = useState('');
+  const [logoutModal, showlogoutModal] = useState(false);
+    const openLogoutModal = () => {
+        showlogoutModal(true);
+    }
+    const closeModal = () => {
+        showlogoutModal(false);
+    }
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        showlogoutModal(false);
+        navigate('/login');
+    }
+
 
   useEffect(() => {
-    // Get username from localStorage (set this on login)
+
     const storedUser = localStorage.getItem('username');
     setUsername(storedUser || '');
     fetch('http://localhost:5000/tasks')
@@ -15,11 +28,7 @@ function UserDashboard() {
       .then(data => setTasks(data));
   }, []);
 
-  const userLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('username');
-    navigate('/login');
-  };
+
 
   // Filter tasks assigned to the logged-in user
   const userTasks = tasks.filter(
@@ -29,13 +38,14 @@ function UserDashboard() {
   return (
     <>
       <div className="min-h-screen flex flex-col items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-10 px-4 relative">
-        {/* Logout button at top-right */}
+      
         <button
           className="absolute top-6 right-6 bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded shadow transition"
-          onClick={userLogout}
+          onClick={openLogoutModal}
         >
           Logout
         </button>
+        <h1 className='absolute top-6 left-6 text-white text-3xl font-bold'>Hello {username} 😊</h1>
         <div className="bg-gray-900 rounded-xl shadow-2xl p-10 w-full max-w-4xl mt-10">
           <h1 className="text-3xl font-bold text-white mb-8 text-center drop-shadow-lg">
             My Tasks
@@ -90,6 +100,18 @@ function UserDashboard() {
             </table>
           </div>
         </div>
+         {/* modal  */}
+        {logoutModal && (
+          <div className='fixed inset-0 flex justify-center items-center bg-black/60 bg-opacity-40 z-50'>
+            <div className='bg-white p-7 space-y-5 rounded-md'>
+              <p>Are you sure you want to logout?</p>
+              <div className='flex gap-5'>
+                <button className='bg-red-700 text-white p-2 rounded-sm' onClick={handleLogout}>Logout</button>
+                <button className='bg-gray-700 text-white p-2 rounded-sm' onClick={closeModal}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
