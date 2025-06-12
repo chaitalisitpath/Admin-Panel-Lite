@@ -3,7 +3,7 @@ import logo from '../assets/white-logo-admin.png'
 
 const AuthLayout = ({ children }) => {
   return (
-    <div className='bg-[#002428] h-screen w-full flex justify-evenly items-center'>
+    <div className='bg-gray-900 h-screen w-full flex justify-evenly items-center'>
       {/* first side for logo */}
       <div>
         <img src={logo} alt="Logo" className="w-80 h-auto" />

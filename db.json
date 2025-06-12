@@ -4,44 +4,58 @@
       "id": "1",
       "username": "admin",
       "password": "admin123"
+    },
+    {
+      "id": "3ce8",
+      "fullname": "chaitali",
+      "email": "chaitali@gmail.com",
+      "username": "chaitali",
+      "password": "chaitali15",
+      "confirmpassword": "chaitali15"
+    },
+    {
+      "id": "43bb",
+      "fullname": "Yashvi",
+      "email": "yashvi@gmail.com",
+      "username": "yashvi",
+      "password": "yashvi123",
+      "confirmpassword": "yashvi123"
+    },
+    {
+      "id": "d4d0",
+      "fullname": "Jeel",
+      "email": "jeel@gmail.com",
+      "username": "jeel",
+      "password": "jeel123",
+      "confirmpassword": "jeel123"
+    },
+    {
+      "id": "bcdf",
+      "fullname": "Ajay",
+      "email": "ajay@gmail.com",
+      "username": "ajay",
+      "password": "Ajay123",
+      "confirmpassword": "Ajay123"
     }
   ],
   "tasks": [
     {
-      "id": "676b",
-      "title": "Angular",
-      "description": "Angular task ",
+      "id": "96d6",
+      "title": "Angular task",
+      "description": "Test1",
       "priority": "Medium",
-      "AssignedTo": "Jeel",
-      "category": "Testing",
-      "dueDate": "2025-06-13"
-    },
-    {
-      "id": "5fe1",
-      "title": "React Js ",
-      "description": "Admin Panel Task",
-      "priority": "High",
-      "AssignedTo": "Fardin",
+      "AssignedTo": "Yashvi",
       "category": "Development",
-      "dueDate": "2025-06-16"
-    },
-    {
-      "id": "80cc",
-      "title": "Dot Net",
-      "description": "Create proper documentation on token ",
-      "priority": "Critical",
-      "AssignedTo": "Ajay",
-      "category": "Documentation",
-      "dueDate": "2025-06-27"
-    },
-    {
-      "id": "41ff",
-      "title": "fddgdf",
-      "description": "gdfgdfgd",
-      "priority": "Medium",
-      "AssignedTo": "Fardin",
-      "category": "Testing",
       "dueDate": "2025-06-20"
+    },
+    {
+      "id": "3724",
+      "title": "dfhdfngh",
+      "description": "dfhgfjhgj",
+      "priority": "Medium",
+      "AssignedTo": "chaitali",
+      "category": "Presentation",
+      "dueDate": "2025-06-28"
     }
   ]
 }

@@ -2,12 +2,14 @@ import { Routes, Route } from 'react-router-dom';
 import useRoutes from '../hooks/user-route';
 import AuthLayout from '../layout/auth-layout';
 import PrivateLayout from '../layout/private-layout';
-
+import Home from '../containers/Home'
 
 const Routing = () => {
   const { authRoutes, privateRoutes } = useRoutes();
   return (
     <Routes>
+       {/* Home route without layout */}
+      <Route path="/" element={<Home/>} />
       {/* Auth routes */}
       <Route element={<AuthLayout />}>
         {authRoutes.map(({ id, element, path, ...otherData }) => (

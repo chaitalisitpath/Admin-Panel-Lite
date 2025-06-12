@@ -1,11 +1,13 @@
 import { useMemo } from "react";
 import URLS from "../constants/url"
 import Login from "../containers/Auth/Login";
+import Register from "../containers/Auth/Register"
 import ForgotPassword from '../containers/Auth/ForgotPassword'
 import Dashboard from '../containers/Admin/Dashboard'
 import Home from '../containers/Home'
 import AddTask from '../containers/Admin/AddTask'
 import UserList from '../containers/Admin/UserList'
+import UserDashboard from "../containers/User/UserDashboard/UserDashboard";
 
 const useRoutes = () =>{
     const allRoutes = useMemo(()=>[
@@ -22,15 +24,27 @@ const useRoutes = () =>{
             isAuth: true
         },
         {
+            id:'register',
+            path:URLS.REGISTER,
+            element: <Register/>,
+            isAuth: true
+        },
+        {
             id:"forgotpassword",
             path:URLS.FORGOT_PASSWORD,
             element: <ForgotPassword/>,
             isAuth: true
         },
         {
-            id:"dashboard",
-            path:URLS.DASHBOARD,
+            id:"admin-dashboard",
+            path:URLS.ADMIN_DASHBOARD,
             element: <Dashboard/>,
+            isPrivate: true
+        },
+        {
+            id:"user-dashboard",
+            path:URLS.USER_DASHBOARD,
+            element: <UserDashboard/>,
             isPrivate: true
         },
         {
